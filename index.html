@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <title>صفحة تجريبية</title>
+
   <style>
     body {
       font-family: 'Cairo', Arial, sans-serif;
@@ -12,41 +15,63 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000000; /* Pure black background */
+      background: #000000;
+      /* Pure black background */
       overflow-y: auto;
       position: relative;
+      font-family: 'Tahoma', 'Arial', sans-serif;
+      direction: rtl;
+      /* for right-to-left text */
     }
-    .orb-top-left, .orb-bottom-right {
+
+    .orb-top-left,
+    .orb-bottom-right {
       position: fixed;
-      width: 300px; /* Increased size */
-      height: 300px; /* Increased size */
+      width: 300px;
+      /* Increased size */
+      height: 300px;
+      /* Increased size */
       border-radius: 50%;
       filter: blur(60px);
       opacity: 0.7;
       animation: pulseOrb 5s ease-in-out infinite;
       z-index: 0;
     }
+
     .orb-top-left {
       top: -100px;
       left: -100px;
       background: linear-gradient(45deg, #ff0066bd, #6600ff);
     }
+
     .orb-bottom-right {
       bottom: -100px;
       right: -100px;
       background: linear-gradient(45deg, #00ffccc5, #ffcc00);
     }
+
     @keyframes pulseOrb {
-      0%, 100% { transform: scale(1); opacity: 0.7; }
-      50% { transform: scale(1.3); opacity: 0.9; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 0.9;
+      }
     }
+
     .card {
       max-width: 650px;
       width: 90%;
       margin: 40px auto;
       padding: 40px;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      backdrop-filter: blur(15px); /* Increased blur for glassmorphism effect */
+      backdrop-filter: blur(15px);
+      /* Increased blur for glassmorphism effect */
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 25px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
@@ -55,12 +80,14 @@
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       z-index: 1;
 
-      
+
     }
+
     .card:hover {
       transform: translateY(-15px);
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
     }
+
     .card::before {
       content: '';
       position: absolute;
@@ -73,6 +100,7 @@
       opacity: 0.3;
       pointer-events: none;
     }
+
     h1 {
       color: #ffffff;
       text-align: center;
@@ -84,6 +112,7 @@
       position: relative;
       z-index: 1;
     }
+
     p {
       font-size: 1.2em;
       color: #e0e0e0;
@@ -93,6 +122,7 @@
       position: relative;
       z-index: 1;
     }
+
     .logo {
       display: block;
       margin: 0 auto 30px;
@@ -104,10 +134,12 @@
       background: linear-gradient(45deg, #3498db, #e74c3c);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+
     .logo:hover {
       transform: scale(1.2) rotate(360deg);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
+
     .download-button {
       display: block;
       margin: 30px auto 10px;
@@ -128,40 +160,50 @@
       z-index: 1;
       animation: neonGlow 1.5s ease-in-out infinite alternate;
     }
+
     .download-button:hover {
       background: linear-gradient(45deg, #6600ff, #ff0066);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
       transform: scale(1.1);
     }
+
     @keyframes neonGlow {
       from {
         text-shadow: 0 0 5px #fff, 0 0 10px #ff0066, 0 0 15px #6600ff;
         box-shadow: 0 0 10px #ff0066, 0 0 20px #6600ff;
       }
+
       to {
         text-shadow: 0 0 10px #fff, 0 0 20px #ff0066, 0 0 30px #6600ff;
         box-shadow: 0 0 20px #ff0066, 0 0 30px #6600ff;
       }
     }
+
     @media (max-width: 600px) {
       .card {
         padding: 25px;
         margin: 20px;
       }
+
       h1 {
         font-size: 2em;
       }
+
       p {
         font-size: 1.1em;
       }
+
       .logo {
         width: 120px;
       }
+
       .download-button {
         padding: 12px 30px;
         font-size: 1.1em;
       }
-      .orb-top-left, .orb-bottom-right {
+
+      .orb-top-left,
+      .orb-bottom-right {
         width: 200px;
         height: 200px;
       }
@@ -169,6 +211,7 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="orb-top-left"></div>
   <div class="orb-bottom-right"></div>
@@ -179,7 +222,8 @@
       هذا نص تجريبي مكتوب باللغة العربية لعرض تصميم صفحة ويب بسيطة. يمكن استخدام هذا النص لاختبار التنسيق والتصميم.
     </p>
     <p>
-      Lorem ipsum بالعربية: هناك العديد من الأسباب التي تجعل النص التجريبي مفيدًا في تصميم المواقع. يساعد في رؤية الشكل النهائي للصفحة دون الحاجة إلى محتوى حقيقي.
+      Lorem ipsum بالعربية: هناك العديد من الأسباب التي تجعل النص التجريبي مفيدًا في تصميم المواقع. يساعد في رؤية الشكل
+      النهائي للصفحة دون الحاجة إلى محتوى حقيقي.
     </p>
     <p>
       نتمنى أن تكون هذه الصفحة مفيدة لأغراض الاختبار الخاصة بك. إذا كنت بحاجة إلى تعديلات إضافية، يرجى إخبارنا!
@@ -187,4 +231,5 @@
     <a href="#" class="download-button">تحميل</a>
   </div>
 </body>
+
 </html>
